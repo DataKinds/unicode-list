@@ -1,0 +1,11 @@
+{
+    "perl"          : "6.*",
+    "name"          : "unicode-list",
+    "version"       : "1",
+    "description"   : "Prints a list of unicode characters.",
+    "tags"          : [ "Unicode" ],
+    "authors"       : [ "Tyler (Aearnus/DataKinds)" ],
+    "license"       : "Artistic-2.0",
+    "depends"       : [ ]
+
+}

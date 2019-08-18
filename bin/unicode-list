@@ -1,0 +1,14 @@
+#!/usr/bin/env perl6
+
+sub prow(Int $i) {
+    my $c = $i.chr;
+    "%s   %-5i %-4X  %s    %s\n".printf($c.uniprop, $i, $i, $c, $c.uniname);
+}
+
+sub MAIN (
+    Int $lower where 0 < * < 0xFFFF, #= the lower bound of Unicode characters to print
+    Int $higher where { (0 < $^a < 0xFFFF) && ($^a > $lower) } #= the upper bound of Unicode characters to print
+) {
+    'Prop Dec   Hex   Chr  Name'.say;
+    for $lower..$higher { .&prow }
+}
